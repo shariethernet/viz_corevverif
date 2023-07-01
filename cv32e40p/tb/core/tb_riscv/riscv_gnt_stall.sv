@@ -26,7 +26,8 @@
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
+/* verilator lint_off WIDTHTRUNC*/
+/* verilator lint_off WIDTHEXPAND*/
 module riscv_gnt_stall
 `ifndef VERILATOR
  import perturbation_defines::*;
@@ -140,3 +141,6 @@ always @(posedge clk_i or negedge rst_ni) begin
 end
 
 endmodule : riscv_gnt_stall
+
+/* verilator lint_on WIDTHTRUNC*/
+/* verilator lint_on WIDTHEXPAND*/

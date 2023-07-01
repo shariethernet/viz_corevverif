@@ -17,7 +17,10 @@
 
 // DVT LINTER waivers are fine because this is not a UVM component.
 //@DVT_LINTER_WAIVER_START "MT20210811_1" disable SVTB.29.1.3.1, SVTB.29.1.7
-
+/* verilator lint_off MULTIDRIVEN */
+/* verilator lint_off LATCH */
+/* verilator lint_off WIDTHTRUNC*/
+/* verilator lint_off WIDTHEXPAND*/
 module mm_ram
 `ifndef VERILATOR
   import uvm_pkg::*;
@@ -837,5 +840,8 @@ module mm_ram
 `endif
 
 endmodule // ram
-
+/* verilator lint_on MULTIDRIVEN */
+/* verilator lint_on LATCH */
+/* verilator lint_on WIDTHTRUNC*/
+/* verilator lint_on WIDTHEXPAND*/
 //@DVT_LINTER_WAIVER_END "MT20210811_1"
